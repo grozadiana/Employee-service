@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Admin Application Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/employee.js"></script>
+    <script src="js/functions.js"></script>
+    <style>
+body {
+  background-image: url('background.jpg');
+
+}
+</style>
+</head>
+
+
+<body onload="getEmployees()">
+
+<h1 align="left">Admin Application</h1>
+
+<h2 align="left">View Employee's Worked Hours</h1>
+<div align="left">
+    <table align="left">
+        <tr>
+            <td><b>employee</b></td>
+            <td><select name="employees" id="selectEmployee"></select></td>
+        </tr>
+        <tr>
+            <td><b>Start Date</b></td>
+            <td><input type="date" id="startDate" placeholder="yyyy-mm-dd" value=""
+                min="1997-01-01" max="2030-12-31"></td>
+        </tr>
+        <tr>
+            <td><b>End Date</b></td>
+            <td><input type="date" id="endDate" placeholder="yyyy-mm-dd" value=""
+                min="1997-01-01" max="2030-12-31"></td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="left"><input type="button" value="Get Hours Worked" onClick="getHoursWorked()"></td>
+        </tr>
+        <tr>
+            <td><span id="result"></span></td>
+        </tr>
+    </table>
+</div>
+<br><br>
+<p>
+    <br> <h2 align="left"></h2>
+</p>
+
+    <p>
+        <br>
+    </p>
+
+<h2> Add Employee</h2>
+<div align="left">
+    <!DOCTYPE html>
+
+    <table align="left">
+        <tr>
+            <td><b>Id</b></td>
+            <td><input type="number" id="addEmployeeId"></td>
+        </tr>
+        <tr>
+            <td><b>Enroll date</b></td>
+            <td><input type="date" id="enrollDate" placeholder="yyyy-mm-dd" value=""
+                       min="1997-01-01" max="2030-12-31"></td>
+        </tr>
+        <tr>
+            <td><b>Hourly rate</b></td>
+            <td><input type="number" max="8" id="hourlyRate"></td>
+        </tr>
+        <tr>
+            <td><b>Name</b></td>
+            <td><input type="text" id="employeeName"></td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="left"><input type="button" value="Add Employee" onclick="addEmployee(addEmployeeId.value, enrollDate.value, hourlyRate.value, employeeName.value)"></td>
+        </tr>
+    </table>
+</div>
+<br><br>
+
+    <p>
+        <br> <h2 align="left"></h2>
+    </p>
+
+    <p>
+        <br>
+    </p>
+<p>
+    <br>
+</p>
+
+    <h2 align="left">Delete Employee</h2>
+<div align="left">
+    <table align="left">
+        <tr>
+            <td><b>Id</b></td>
+            <td><input type="number" id="employeeId"></td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="left"><input type="button" value="Delete Employee" onclick="deleteEmployee(employeeId.value)"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
